@@ -3,9 +3,9 @@ namespace App\Controllers;
 
 use Core\Controller;
 
-class IndexController extends Controller {
-    
+class indexController extends Controller {
+
     public function index() {
-        $this->view('index');
+        $this->view('signin');
     }
 }

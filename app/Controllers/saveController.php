@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use Core\Controller;
-use App\Models\User;
+use App\Models\Note;
 
 class saveController extends Controller {
 
@@ -20,6 +20,7 @@ class saveController extends Controller {
       $post = ['title'=>$title, 'content'=>$content];
       $note->saveContent($post);
       $posts = $note->getAllContent();
+      $this->view('notes', ['post' => $posts]);
     } else {
       //preecha os campos
       $this->view('error', ['error' => 'Preencha todos os campos!']);

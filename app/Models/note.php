@@ -11,7 +11,7 @@ class Note extends Database{
     public function getAllContent($columns = '*') {
         $db = Database::getInstance();
     
-        $data = $db->getList($this->table, $columns, $conditions);
+        $data = $db->getList($this->table, $columns);
     
         return $data;
     }

@@ -4,13 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/index.css">
     <title>Anotações</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+        header {
+            box-shadow: 5px 5px 5px rgba(38, 23, 53, 0.199);
+            background-color: #351cb5bb;
+        }
+        .title {
+            padding-top: 1.3em;
+            padding-bottom: 1em;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        .c1 {
+            color: #4a199ed6;
+        }
+        .c2 {
+            color: #a36ac1c6;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="title" align="center">
+            <span class="c1">Share</span><span class="c2">With</span>
+        </div>
+    </header>
+    <h1>Todas as Notas</h1>
     <section class='notes'>
-        <h1>Minhas Anotações</h1>
-        <p><?php echo $content; ?></p>
+        <h2><?php echo $post[0]['title']; ?></h2> 
+        <p><?php echo $post[0]['content']; ?></p>
     </section>
 </body>
 </html>

@@ -8,7 +8,7 @@ class User extends Database{
     
     private $table = 'user';
 
-    public function find($columns = '*', $conditions = null) {
+    public function find($columns = '*', $conditions) {
         $db = Database::getInstance();
     
         $data = $db->getList($this->table, $columns, $conditions);

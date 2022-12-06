@@ -16,7 +16,7 @@ class DataBase {
     /**
      * Doesn't allow multiple instances (final)
      */
-    final private function __construct() {}
+    final public  function __construct() {}
 
     /**
      * Doesn't allow cloning of instances

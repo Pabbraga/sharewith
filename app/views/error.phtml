@@ -11,10 +11,12 @@
             padding: 0;
         }
         .main {
-            width: 300px;
+            width: 400px;
             height: 200px;
-            margin: 200px auto;
+            margin: 150px auto;
             text-align: center;
+            padding: 50px 50px;
+            border-radius: 10px;
         }
         .error {
             color: rgba(68, 67, 76, 0.649);
@@ -29,7 +31,7 @@
 </head>
 <body>
     <div class="main">
-        <span class="error"><?php echo $error; ?></span>
+        <span class="error"><p><?php echo $error; ?></p></span>
     </div>
 </body>
 </html>

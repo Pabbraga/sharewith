@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShareWith</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            box-shadow: 5px 5px 5px rgba(38, 23, 53, 0.199);
+            background-color: #351cb5bb;
+        }
+        .title {
+            padding-top: 1.3em;
+            padding-bottom: 1em;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        .c1 {
+            color: #4a199ed6;
+        }
+        .c2 {
+            color: #a36ac1c6;
+        }
+        body {
+            background-color: #ebdafc;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .profile {
+            
+            text-align: left;
+        }
+        .picture {
+            margin-top: 50px;
+            border: 5px solid #bbb;
+            border-radius: 50%;
+        }
+        .info{
+            margin: 25px;
+            padding: 5px;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        .feed {
+            width: 50%;
+            height: 300px;
+            font-size: 1.2em;
+            font-weight: 700;
+            padding: 25px;
+            margin: 0 auto;
+        }
+        .input {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title" align="center">
+            <span class="c1">Share</span><span class="c2">With</span>
+        </div>
+    </header>
+    <section class='profile'>
+        <div class='info'>
+            <p class="c2">Nome: <span class="c1"><?php echo $user[0]['name']; ?></span></p>
+            <p class="c2">E-mail: <span class="c1"><?php echo $user[0]['email']; ?></span></p>
+        </div>
+    </section>
+    <div class='feed'>
+        <form action="save" method="post">
+            <p class="c1" align="center">Partilhe</p>
+            <input type="text" name="title" class="input" >
+            <textarea name='content' rows='6' cols='40' maxlength='800' class="input"></textarea>
+            <input type="submit" name="Salvar" class='button'>
+        </form>
+    </div>
+</body>
+</html>

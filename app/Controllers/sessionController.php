@@ -24,7 +24,7 @@ class sessionController extends Controller {
           $this->view('home', ['user' => $targetUser]);
         } else {
           //dados inválidos ou incorretos
-          $this->view('error', ['error' => 'Dados inválidos ou incorretos!']);
+          $this->view('error', ['error' => 'Dados incorretos ou inválidos!']);
         }
       }
     } else {
